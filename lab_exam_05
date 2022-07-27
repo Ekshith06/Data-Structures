@@ -1,0 +1,20 @@
+""""Given a positive integer n, sum all of its digits to get a new number. Repeat this operation until the new number is less than 10 and print that result.
+
+For example, if n = 12345 then output is 6  (1+2+3+4+5 = 15, 1+5 = 6)
+""""
+def funct(st):
+    sum = 0 
+
+    for val in st:
+        sum += (ord(val)-ord('0'))
+    return str(sum)
+    
+string = input()
+string = string[1:]
+
+while(len(string)>1):
+    string = funct(string)
+    
+print(ord(string)-ord('0'))
+
+

@@ -1,0 +1,22 @@
+"""Write a Python class named Student with two instances student1, student2 and assign given values to
+the said instances attributes. Print all the attributes of student1, student2 instances with their values:"""
+
+class student:
+    clg = "happy valley"
+    def __init__(self,name,rollno,gpa):#here name,rollno,gpa are instance varible
+        self.name = name
+        self.rollno = rollno
+        self.gpa = gpa
+        
+    def display(self):
+        print("student name:",self.name)
+        print("student rollnumber:",self.rollno)
+        print("gpa:",self.gpa)
+        print("college:",student.clg)
+
+student1 = student("swapnajali","120485632","9.54")
+student1.display()
+student2 = student("bharath","120485552","9.25")
+student2.display()
+student3 = student("shanu","120486692","9.8")
+student3.display()

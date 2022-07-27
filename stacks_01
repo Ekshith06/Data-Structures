@@ -1,0 +1,31 @@
+class Stack:
+    top = -1
+    
+    def __init__(self,lst):
+        self.lst = lst
+    
+    def push(self,val):
+        self.top = self.top + 1
+        self.lst[self.top] = val
+        
+    def pop(self):
+        self.top = self.top - 1
+            
+                    
+
+lst = [None]*3
+stack = Stack(lst)
+l = []
+n = int(input())
+for i in range(n):
+    inp = str(input())
+    l.append(inp)
+for v in l:
+    if v == "display()":
+        for i in lst:
+            print(i,end = " ")
+    if v == "pop()":
+        stack.pop()
+    if v[0:5] == "push(":
+        item = int(v[5])
+        stack.push(item)

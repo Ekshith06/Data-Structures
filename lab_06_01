@@ -1,0 +1,44 @@
+
+# Implement BankAccount class with at least three methods
+"""
+Three methods to implement Are:
+deposit
+withdrawl
+checking balance
+"""
+#EKSHITH.KOLLA
+#12210322044
+class BankAccount :
+    def __init__(self):
+        self.balance = 0
+        print ("Welcome to our bank")
+        print("Choose 1 for Deposit \n       2 for Withdrawl \n       3 for Checking Balance")
+    def Deposit_Money(self) : #method1
+        money_to_deposit = int (input("Enter the amount you want to deposit: "))
+        self.balance = self.balance + money_to_deposit
+        return self.balance
+    def withdrawal(self) : #method2
+        money_to_withdrawl = int (input("Enter the amount you want to withdraw: "))
+        if money_to_withdrawl <= self.balance :
+            self.balance = self.balance - money_to_withdrawl
+            return self.balance
+        elif money_to_withdrawl >= self.balance:
+            print("Balance is not Sufficient.")
+    def Balance(self) : #balnce
+        print("The Balance in your account now is :",self.balance)
+
+b = BankAccount()
+a = int(input("Choose 1 or 2 or 3 : "))
+
+if a == 1 :
+    b.Deposit_Money()
+    b.Balance()
+elif a == 2 :
+    print ("If you want to withdraw then first Deposit")
+    b.Deposit_Money()
+    b.withdrawal()
+    b.Balance()
+elif a == 3 :
+    b.Balance()
+else :
+    print("Please Check your Option, and try again")

@@ -1,0 +1,38 @@
+# Write a class that represents a Planet. The constructor class should accept the arguments radius (in meters) and rotation_period (in seconds).
+
+# You should implement three methods:
+
+# surface_area
+
+# rotation_frequency
+
+#122010322044
+#EKSHITH.KOLLA
+# Instead of numpy we can also import math.
+import numpy as np
+class Planet :
+    def __init__(self, radius, rotation_period):
+        self.radius = radius
+        self.rotation_period = rotation_period
+
+# Find the formulas for both surface_area and rotation_frequency.
+
+    def surface_area(radius):
+        surface_area = 4 * np.pi *((radius)**2)
+        return surface_area
+
+    def rotation_frequency(rotation_period) :
+        rotation_frequency = (2* np.pi)/(rotation_period)
+        return rotation_frequency
+
+radius = int(input("Enter the radius of the planet: "))
+rotation_frequency = int(input("Enter the rotation period of the planet: "))
+
+area = Planet.surface_area(radius)
+frequency = Planet.rotation_frequency(rotation_frequency)
+
+print("Surface area:",area )
+print("Rotation_frequency:",frequency)
+#122010322044
+#EKSHITH.KOLLA
+

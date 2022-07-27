@@ -1,0 +1,59 @@
+""""do the shape program with Super class as Shape and Child classes as Triangle, Rectangle, and Circle
+
+The Shape class should contain a default constructor and a cal_area() function written with pass
+
+your task is to create the above mentioned child classes inheriting from the super class Shape
+
+you need to override the function cal_area() which is inherited from the super class shape for your purpose
+
+Input:2
+
+3
+
+4
+
+5
+
+3.14
+
+5
+
+output:3
+
+20
+
+78.5
+codefrom here"""
+v1,v2,v3,v4,v5,v6 = int(input()),int(input()),int(input()),int(input()),float(input()),int(input())
+
+class shape:
+    def init(self):
+        pass
+    
+    def cal_area(self,l,b):
+        pass
+    
+class triangle(shape):
+    def cal_area(self,b,h):
+        area = (b)*(h)//2
+        return area
+        
+class rectangle(shape):
+    def cal_area(self,l,b):
+        area = (l)*(b)
+        return area
+class circle(shape):
+    def cal_area(self,pi,r):
+        area = (pi)*((r)**2)
+        return area
+
+w = triangle()
+w1 =rectangle()
+w2=circle()
+print(w.cal_area(v1,v2))
+print(w1.cal_area(v3,v4))
+a = str(w2.cal_area(v5,v6)).split(".")
+if a[1]=="0":
+    print(a[0])
+else:
+    print(w2.cal_area(v5,v6))

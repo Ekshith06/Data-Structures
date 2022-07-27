@@ -1,0 +1,26 @@
+class tsunamisensor:
+    def init(self):
+      	pass
+    def tsunamipredictor(self,a,b):
+     s1 = 0
+     s2 = 0
+     t = 0
+     for i in range (0,m):
+        s1+= a[i]
+    
+        s2+=b[i]
+     t = (((s1/m)+(s2/m))/2)
+     return t
+
+w=tsunamisensor()
+a = []
+b=[]
+m = 12
+for i in range (0,m):
+    v=float(input())
+    a.append(v)
+for j in range (0,m):
+    v1 = float(input())
+    b.append(v1)
+w1=w.tsunamipredictor(a,b)
+print(round(w1,1))

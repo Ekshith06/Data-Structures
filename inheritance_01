@@ -1,0 +1,46 @@
+"""create a class Basicmath -> the functions in this class are add() sub() mul()
+
+create a class Math -> inheriting the class Basicmath -> the functions in this class are power() and factorial()
+
+Because the Math is deriving from Basicmath and also have its own functions -> Math class will be child and Basicmath will be parent. 
+
+Now Math class can access the add(), sub(), mul() and also its own functions power() and factorial()
+
+fill all the functions with your own code and use return statement to return the value
+
+create an obj for Math class and while writing the program for power() and factorial() use the Basicmath functions where ever necessary.
+
+so when ever you are using the a*b use mul(a,b). as you can access your parent's functions.
+"""
+class basicmath:
+    def __init__(self):
+        pass
+    def add(self,number1,number2):
+        return number1+number2
+    def sub(self,number1,number2):
+        return number1-number2
+    def mul(self,number1,number2):
+        return number1*number2
+class math(basicmath):
+    def power(self,number1,number2):
+        return number1**number2
+    def factorial(self,number1):
+        f = 1
+        for i in range(1,number1+1):
+            f *=i
+        return f
+number1 = int(input())
+number2 = int(input())
+
+w = math()
+a = math().add(number1,number2)
+s = math().sub(number1,number2)
+m = math().mul(number1,number2)
+p = math().power(number1,number2)
+f = math().factorial(number1)
+
+print("The addition",number1 ,"and",number2, "is",a)
+print("The sub of", number1 ,"and" ,number2 ,"is",s)
+print("The mul of", number1,"and", number2 ,"is",m)
+print("The answer for", number1,"to the power of", number2 ,"is :",p)
+print("The answer for the factorial of", number1 ,"is:",f)

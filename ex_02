@@ -1,0 +1,24 @@
+#kolla.indra koti ekshith
+#122010322044
+#sum of the fibinocci numbers
+n = int(input("Enter the how many numbers you want to print"))
+#At first we have to assign the numbers from where we need to start
+first = 1
+second = 1
+sum = 0
+#to calculate all iterations we need to use for loop
+for i in range(n):
+    #print(first)
+    sum += first #sum of all the numbers
+    normal = first
+    first = second 
+    second = normal + second
+lastdigit = sum % 10  
+print(lastdigit)
+#1 1
+#1+1=2
+#1 1 2
+#1+1+2=3
+
+#if n= 3 output:(1+1+2)4
+#if n=10 output:(1+1+2+3+5+8+13+21+34+55):143

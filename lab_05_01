@@ -1,0 +1,23 @@
+
+# Create a class Point and initialize with the user defined values and write a method to calculate the distance of the point from the origin
+#122010322044
+#EKSHITH.KOLLA
+class Point:
+    def __init__(self, x, y) :
+        self.x = x
+        self.y = y
+# We know that the distance between the coordinates is ((x)**2 + (y)**2)**(1/2)
+#122010322044
+#EKSHITH.KOLLA
+# find the formula of distance_from_origin to (x,y).
+    def distance_from_origin(x, y) :
+        return ((x)**2 + (y)**2)**(1/2)
+
+x = int(input("Enter the x-coordinate (x): "))
+y = int(input("Enter the y-coordinate (y): "))
+
+print("The Distance of the point from the Origin is :",Point.distance_from_origin(x, y))
+#to print the round figure of the distance
+print("Round Figure :",int(Point.distance_from_origin(x, y)))
+#122010322044
+#EKSHITH.KOLLA

@@ -1,0 +1,20 @@
+#122010322044
+#ekshith.kolla
+#Decode program
+st = input()
+res = ""
+val = 0
+#repated sussive characters as asingle count and character
+for i in range(len(st)):
+    # r = int(str[i])
+   
+    if(i%2==0):
+        val = ord(st[i]) - ord('0')
+    
+    else:
+        for j in range(val):
+            res += st[i]
+        val = 0
+        
+print(res)
+#s = "4a3b2c1d2a" then output is "aaaabbbccdaa"

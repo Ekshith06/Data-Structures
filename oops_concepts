@@ -1,0 +1,28 @@
+oops 
+class and object
+object:collection of data and its functionality
+class: blue print for objects
+using the class we create objects
+to create the class we need to use class
+
+example program:
+class person:
+    pass
+p=person()
+print(p)
+
+methods:these are function belong to class
+define the method we use "def"
+class person:
+    def display(self):
+        print("Heloo")
+person1 = person()
+person1.display()
+
+FUNDAMENTAL FEATURES:
+---->>Inheritance
+---->>Encapsulation
+---->>Polymorphism
+INHERITANCE:
+-->Base class = already existing class
+-->derived class = newely derived class

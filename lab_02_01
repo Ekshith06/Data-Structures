@@ -1,0 +1,21 @@
+
+"""Define a class called Bike that accepts a string and a float as input, and assigns those inputs
+respectively to two instance variables, color and price. Assign to the variable testOne an instance of Bike
+whose color is blue and whose price is 89.99. Assign to the variable testTwo an instance of Bike whose
+color is purple and whose price is 25.0."""
+#ekshith.kolla
+#122010322044
+# The name of the class and rates re taken fro the data given question
+class bike:
+  def __init__(self,colour,price):
+    self.colour = colour
+    self.price = price
+
+  def __repr__(self):  #return a printable representation of the object
+    return "colour: {}\n price: {}".format(self.colour,self.price)
+
+bullet = bike("blue",88.99)
+ktm = bike("purple",25.0)
+
+print(bullet)
+print(ktm)

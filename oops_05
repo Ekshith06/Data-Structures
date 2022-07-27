@@ -1,0 +1,18 @@
+dst1, dst2 = int(input()), int(input())
+
+class distance:
+    
+    def __init__(self):
+        pass
+    
+    def final(self,dst1, dst2):
+        t= dst1+dst2
+        return t
+    def distance_in_meters(self,dst):
+        return str(t*1000)+" m"
+        
+dt = distance()
+
+t=dt.final(dst1,dst2)
+
+print(dt.distance_in_meters(t))

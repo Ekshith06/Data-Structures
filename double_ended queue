@@ -1,0 +1,93 @@
+class Queue:
+    front,rear = -1,-1
+    
+    def __init__(self, lst):
+        self.lst = lst
+        self.front <= self.rear
+    
+    def enqueuebeg(self, val):
+        
+        if self.rear == -1 and self.front == -1:
+            self.rear += 1
+            self.front +=1
+            self.lst[self.front] = val
+        
+        else:
+            
+            if self.rear != len(self.lst) - 1:
+                self.rear += 1
+                i = self.rear
+                
+                while i >= self.front:
+                    self.lst[i] = self.lst[i-1]
+                    i -= 1
+                self.lst[0] = val
+    
+    def enqueueend(self, val):
+        
+        if self.rear == -1 and self.front == -1:
+            self.rear += 1
+            self.front +=1
+
+            self.lst[self.rear] = val
+        
+        else:
+            
+            if self.rear != len(self.lst) - 1:
+                self.rear +=1
+                self.front +=1
+                self.lst[self.rear] = val
+            
+            else:
+                print("the array is already full")
+    
+    def dequeuebeg(self):
+        
+        if self.lst == 0:
+            print("array list is empty")
+        
+        else:
+            self.lst.pop(0)
+    
+    def dequeueend(self):
+        
+        if self.lst == 0:
+            print("array list is empty")
+        
+        else:
+            
+            if self.lst[-1] != None:
+                self.lst.pop(self.rear)
+            
+            else:
+                self.rear -= 1
+    
+    def display(self):
+        
+        for i in range(0,self.rear+1):
+            print(self.lst[i], end = " ")
+
+
+l = int(input())                                                            
+n = [input() for i in range(l)]                                           
+lst = [None] * (l)                                                        
+
+call = Queue(lst)
+for i in n:
+    if "enqueue" in i:
+        if "enqueuebeg" in i:
+            y = i.split("(")                                                
+            y = y[1][:-1]
+            call.enqueuebeg(y)
+        else:
+            z = i.split("(")                                                
+            z = z[1][:-1]
+            call.enqueueend(z)
+    elif "dequeue" in i:
+        if "dequeuebeg" in i:
+            call.dequeuebeg()
+        else:
+            call.dequeueend()
+    else:
+        call.display()
+

@@ -1,0 +1,18 @@
+class complex():
+    def __init__(self,a,b):
+        self.a = a
+        self.b = b
+    def __add__(self,val):
+        a1 = self.a + val.a
+        a2 = self.b + val.b
+    
+        return str(a1)+"+i"+str(a2)
+    
+x,y =input(),input()
+f =x.split("+i")
+j =y.split("+i")
+x1,x2,y1,y2=int(f[0]),int(j[0]),int(f[1]),int(j[1])
+y = complex(x1,y1)
+z = complex(x2,y2)
+r = y+z
+print(r)

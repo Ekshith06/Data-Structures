@@ -1,0 +1,33 @@
+"""
+Write a Python script to find the validity of a string s consisting of a series of ( ) { } [ ] .
+
+A string is valid if the opening and closing pair of brackets is properly matched.
+
+For example, if s =( [ ] { } ) then output is "valid"
+"""
+If s=( [ ) ] then output is "not valid"
+
+#122010322044.cse.vizag
+#ekshith.kolla
+#if the close and open braces are there then its is valid 
+
+str = input()
+st = []
+check=1
+
+for val in str:
+    if val == '{' or val == '[' or val == '(' :
+        st.append(val)
+   
+    else:
+        if (len(st)>0) and ( (st[len(st)-1] == '{' and val == '}') or (st[len(st)-1] == '(' and val == ')') or (st[len(st)-1] == '[' and val == ']') ):
+            st.pop()
+       
+        else :
+            check=0
+            break
+
+if check ==1 :
+    print("valid")
+else:
+    print("not valid")

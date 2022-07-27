@@ -1,0 +1,65 @@
+""""
+Function for reversing a linked list.
+
+The input should be like: 5 8 9 3 7 6 where 5 is the number of elements in the linked list and 8,9,3,7,6 are the elements of the linked list
+"""
+class Node:
+
+	def __init__(self, data):
+		self.data = data
+		self.next = None
+
+
+class LinkedList:
+
+	def __init__(self):
+		self.head = None
+
+	def reverseUtil(self, curr, prev):
+
+		if curr.next is None:
+			self.head = curr
+
+			curr.next = prev
+			return
+
+		next = curr.next
+
+		curr.next = prev
+
+		self.reverseUtil(next, curr)
+
+
+
+	def reverse(self):
+		if self.head is None:
+			return
+		self.reverseUtil(self.head, None)
+
+
+	def push(self, new_data):
+	    if self.head is None:
+	        self.head = Node(new_data)
+	    else:
+	        temp = self.head
+	        while temp.next != None:
+	            temp = temp.next
+	        temp.next = Node(new_data)
+	        
+	        
+	
+	def printList(self):
+		temp = self.head
+		while(temp):
+			print (temp.data,end="\n")
+			temp = temp.next
+
+
+llist = LinkedList()
+val = int(input())
+for i in range(val):
+    llist.push(int(input()))
+llist.reverse()
+
+llist.printList()
+

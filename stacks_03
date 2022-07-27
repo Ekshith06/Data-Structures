@@ -1,0 +1,19 @@
+"""" using stack detecting brackets:"""
+class Solution:
+    def RequiredBrackets(self, S):
+      if not S:
+         return 0
+      count = 0
+      temp = []
+      temp_counter = 0
+      for i in S:
+         if i =='(':
+            temp.append(i)
+         else:
+            if len(temp)>0 and temp[len(temp)-1] =='(':
+               temp.pop(len(temp)-1)
+            else:
+               temp.append(i)
+      return len(temp)
+result = Solution()
+print(result.RequiredBrackets(input()))
